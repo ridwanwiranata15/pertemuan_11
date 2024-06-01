@@ -8,10 +8,11 @@ class TaskController extends Controller
 {
     public function index()
     {
-        $tasks = Task::getAll();
-        return view('Task.index', [
-            'tasks' => $tasks
-        ]);
+        $tasks = Task::all();
+        dd($tasks);
+        // return view('Task.index', [
+        //     'tasks' => $tasks
+        // ]);
     }
     public function detail($id){
         $task = Task::getById($id);
