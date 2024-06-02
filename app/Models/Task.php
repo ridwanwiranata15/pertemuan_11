@@ -31,7 +31,15 @@ class Task extends Model
             "name",
             "description",
             "deadline",
-            "status"
+            "status_id"
     ]; 
-    
+
+    public function status()
+    {
+        return $this->belongsTo(Status::class);
+    }
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }

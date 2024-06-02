@@ -1,5 +1,10 @@
 @extends('template')
 @section('content')
+    <div class="container mt-3">
+        <h1>Data tugas</h1>
+<a href="{{ route('task.create') }}">
+    <button class="btn btn-primary">Tambah</button>
+</a>
     <table class="table">
         <thead>
           <tr>
@@ -30,4 +35,5 @@
 
             @endforeach
         </tbody>
-      @endsection
+    </div>
+@endsection
