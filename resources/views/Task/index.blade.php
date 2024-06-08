@@ -2,6 +2,7 @@
 @section('content')
     <div class="container mt-3">
         <h1>Data tugas</h1>
+        {{auth()->user()->role}}
 <a href="{{ route('task.create') }}">
     <button class="btn btn-primary">Tambah</button>
 </a>
